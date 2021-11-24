@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Website extends Model
+{
+    use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
+    protected $fillable = [
+        'name',
+        'url',
+    ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'websites_users');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+}

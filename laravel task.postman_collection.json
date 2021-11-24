@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "1d4ac8c3-5fc9-4d3a-9103-401f9ccb1114",
+		"name": "laravel task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "this is a new title 15",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "tes test test test",
+							"type": "text"
+						},
+						{
+							"key": "website_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscripu user for website",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "website_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/subscripe",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"subscripe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
